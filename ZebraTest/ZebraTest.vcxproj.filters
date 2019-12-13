@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Test Files">
+      <UniqueIdentifier>{11f53006-0e98-498c-b18e-618670255991}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main File">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3c4fa02c-c39a-4fd6-b204-04963bdc0a95}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Main File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Zebra\argument_storage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TEST_argument_storage.cpp">
+      <Filter>Test Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TEST_taint_manager.cpp">
+      <Filter>Test Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Zebra\taint_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TEST_parse_instruction.cpp">
+      <Filter>Test Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Zebra\parse_instruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Zebra\process_context.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Zebra\process_taint_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Zebra\handle_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Zebra\locakble_handle_container.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Zebra\thread_context.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

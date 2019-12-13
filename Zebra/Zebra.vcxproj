@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{258014C7-414D-44ED-AF14-95619F902D29}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Zebra</RootNamespace>
+    <SccProjectName>Svn</SccProjectName>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)\lib\gtest-1.6.0\include;$(SolutionDir)\lib\pin\source\include\pin;$(SolutionDir)\lib\pin\source\include\pin\gen;$(SolutionDir)\lib\pin\extras\xed2-ia32\include;$(SolutionDir)\lib\pin\extras\components\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\gtest-1.6.0\lib;$(SolutionDir)lib\pin\ia32\lib;$(SolutionDir)lib\pin\extras\xed2-ia32\lib;$(SolutionDir)lib\pin\ia32\lib-ext;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)lib\pin\source\include;$(SolutionDir)lib\pin\source\include\gen;$(SolutionDir)lib\pin\extras\xed2-ia32\include;$(SolutionDir)lib\pin\extras\components\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\pin\ia32\lib;$(SolutionDir)lib\pin\extras\xed2-ia32\lib;$(SolutionDir)lib\pin\ia32\lib-ext;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>TARGET_IA32;HOST_IA32;TARGET_WINDOWS;USING_XED</PreprocessorDefinitions>
+      <AdditionalOptions>/MT /EHs- /EHa- /wd4530 /DTARGET_WINDOWS /DBIGARRAY_MULTIPLIER=1 /DUSING_XED /D_CRT_SECURE_NO_DEPRECATE /D_SECURE_SCL=0 /nologo /DTARGET_IA32 /DHOST_IA32 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/DLL /EXPORT:main /NODEFAULTLIB /NOLOGO /ENTRY:Ptrace_DllMainCRTStartup@12 ntdll-32.lib libxed.lib pin.lib pinvm.lib libcmt.lib libcpmt.lib /DEBUG %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>TARGET_IA32;HOST_IA32;TARGET_WINDOWS;USING_XED</PreprocessorDefinitions>
+      <AdditionalOptions>/MT /EHs- /EHa- /wd4530 /DTARGET_WINDOWS /DBIGARRAY_MULTIPLIER=1 /DUSING_XED /D_CRT_SECURE_NO_DEPRECATE /D_SECURE_SCL=0 /nologo /DTARGET_IA32 /DHOST_IA32 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/DLL /NODEFAULTLIB /EXPORT:main /NOLOGO /ENTRY:Ptrace_DllMainCRTStartup@12 ntdll-32.lib libxed.lib pin.lib pinvm.lib libcmt.lib libcpmt.lib /DEBUG %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="argument_storage.cpp" />
+    <ClCompile Include="function_callback.cpp" />
+    <ClCompile Include="handle_manager.cpp" />
+    <ClCompile Include="image_utils.cpp" />
+    <ClCompile Include="image_utils.h" />
+    <ClCompile Include="instruction_utils.cpp" />
+    <ClCompile Include="instrument.cpp" />
+    <ClCompile Include="locakble_handle_container.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="parse_instruction.cpp" />
+    <ClCompile Include="process_context.cpp" />
+    <ClCompile Include="process_taint_manager.cpp" />
+    <ClCompile Include="signature_finder.cpp" />
+    <ClCompile Include="taint_manager.cpp" />
+    <ClCompile Include="thread_context.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="argument.h" />
+    <ClInclude Include="argument_storage.h" />
+    <ClInclude Include="defines.h" />
+    <ClInclude Include="handle_manager.h" />
+    <ClInclude Include="function_callback.h" />
+    <ClInclude Include="instruction_utils.h" />
+    <ClInclude Include="instrument.h" />
+    <ClInclude Include="lockable_handle_container.h" />
+    <ClInclude Include="parse_instruction.h" />
+    <ClInclude Include="process_context.h" />
+    <ClInclude Include="process_taint_manager.h" />
+    <ClInclude Include="signature.h" />
+    <ClInclude Include="signature_finder.h" />
+    <ClInclude Include="taint.h" />
+    <ClInclude Include="taint_manager.h" />
+    <ClInclude Include="thread_context.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="decompress.py" />
+    <None Include="decompressed.hwp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

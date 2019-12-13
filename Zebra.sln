@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZebraTest", "ZebraTest\ZebraTest.vcxproj", "{50EB0FB6-2544-466F-9AFE-B89C378634D3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{258014C7-414D-44ED-AF14-95619F902D29} = {258014C7-414D-44ED-AF14-95619F902D29}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zebra", "Zebra\Zebra.vcxproj", "{258014C7-414D-44ED-AF14-95619F902D29}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sample", "Sample\Sample.vcxproj", "{04BCBB70-C08D-491C-8933-46E4ECE210C0}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50EB0FB6-2544-466F-9AFE-B89C378634D3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{50EB0FB6-2544-466F-9AFE-B89C378634D3}.Debug|Win32.Build.0 = Debug|Win32
+		{50EB0FB6-2544-466F-9AFE-B89C378634D3}.Release|Win32.ActiveCfg = Release|Win32
+		{50EB0FB6-2544-466F-9AFE-B89C378634D3}.Release|Win32.Build.0 = Release|Win32
+		{258014C7-414D-44ED-AF14-95619F902D29}.Debug|Win32.ActiveCfg = Debug|Win32
+		{258014C7-414D-44ED-AF14-95619F902D29}.Debug|Win32.Build.0 = Debug|Win32
+		{258014C7-414D-44ED-AF14-95619F902D29}.Release|Win32.ActiveCfg = Release|Win32
+		{258014C7-414D-44ED-AF14-95619F902D29}.Release|Win32.Build.0 = Release|Win32
+		{04BCBB70-C08D-491C-8933-46E4ECE210C0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{04BCBB70-C08D-491C-8933-46E4ECE210C0}.Debug|Win32.Build.0 = Debug|Win32
+		{04BCBB70-C08D-491C-8933-46E4ECE210C0}.Release|Win32.ActiveCfg = Release|Win32
+		{04BCBB70-C08D-491C-8933-46E4ECE210C0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
